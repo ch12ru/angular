@@ -1,0 +1,138 @@
+<div class="w3-panel w3-card-4 mt-1 container">
+    <div class="tab-slider--nav mt-4">
+        <ul class="tab-slider--tabs">
+            <li class="tab-slider--trigger" [class.active]="viewMode == 'tab1'" rel="tab1" (click)="viewMode ='tab1'">
+                Match
+                Stats</li>
+            <li class="tab-slider--trigger" [class.active]="viewMode == 'tab2'" rel="tab2" (click)="viewMode ='tab2'">
+                Expert
+                Team</li>
+        </ul>
+
+    </div>
+
+    <div class="tab-slider--container" [ngSwitch]="viewMode">
+
+        <div id="tab1" class="tab-slider--body" *ngSwitchCase="'tab1'">
+            <h6 style="text-align: center;" class="mt-1"><b>Results of last 5 matches</b></h6>
+            <div class="row">
+                <div class="col-6" style="text-align: center;">
+                    <h2 style="text-align: center;">{{details.team1}}</h2>
+                    <div class="flex-container">
+                        <div *ngFor="let result of details.team1LastFive"
+                            [ngClass]="{'win': result === 'W', 'loss': result === 'L'}">{{result}}</div>
+                    </div>
+                </div>
+                <div class="col-6" style="text-align: center;">
+                    <h2 style="text-align: center;">{{details.team2}}</h2>
+                    <div class="flex-container">
+                        <div *ngFor="let result of details.team2LastFive"
+                            [ngClass]="{'win': result === 'W', 'loss': result === 'L'}">{{result}}</div>
+                    </div>
+                </div>
+            </div>
+            <h6 style="text-align: center;" class="mt-5"><b>Venu Stats</b></h6>
+            <p class="venustatscard"> {{details.venuStats.stadium}}</p>
+            <div class="row">
+                <div class="col-md-3 ">
+                    <div class="w3-panel w3-card-2 mt-3 ">
+                        Pitch
+                        <p class="venustatscard">{{details.venuStats.pitch}}</p>
+                    </div>
+
+                </div>
+                <div class="col-md-3">
+                    <div class="w3-panel w3-card-2 mt-3 ">
+                        Good for
+                        <p class="venustatscard">{{details.venuStats.goodFor}}</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="w3-panel w3-card-2 mt-3 ">
+                        Weather
+                        <p class="venustatscard">{{details.venuStats.weather}}</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="w3-panel w3-card-2 mt-3 ">
+                        Average score
+                        <p class="venustatscard">{{details.venuStats.averageScore}}</p>
+                    </div>
+                </div>
+            </div>
+            <h6 style="text-align: center;font-size: 25px;" class="mt-5"><b>Captain and vice captain Options</b></h6>
+            <div class="row" style="background-color: rgb(236, 242, 247);">
+                <div class="col-6 mt-5">
+                    <p>Captain Options</p>
+                    <div *ngFor="let captain of details.captainOptions">
+                        <li>{{captain}}</li>
+                    </div>
+                </div>
+                <div class="col-6 mt-5">
+                    <p>Vice captain Options</p>
+                    <div *ngFor="let vicecaptain of details.viceCaptainOptions">
+                        <li>{{vicecaptain}}</li>
+                    </div>
+                </div>
+            </div>
+            <h6 style="text-align: center;" class="mt-5"><b>Key players to watchout for</b></h6>
+            <div class="row">
+
+
+                <div class="col-6 mt-5">
+                    <div *ngFor="let accordion of details.keyPlayers">
+                        <div class="card accordCard">
+                            <div id="heading{{ accordion.id }}">
+                                <div class="btn accordianstyle collapsed" data-toggle="collapse"
+                                    [attr.data-target]="'#collapse' + accordion.id" aria-expanded="false"
+                                    [attr.aria-controls]="'collapse' + accordion.id">
+                                    <b>{{accordion.playerName }}</b>
+                                    <span class="accordion-icon"></span>
+                                </div>
+                            </div>
+
+                            <div [attr.id]="'collapse' + accordion.id" class="collapse" data-parent="#accordion">
+                                <div class="card-body">
+                                    {{ accordion.description}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-6 mt-2">
+                <iframe width="300" height="200" src="https://www.youtube.com/embed/tgbNymZ7vqY">
+                </iframe>
+            </div>
+
+            <h6 style="text-align: center;" class="mt-5"><b>Who will win today?</b></h6>
+            <div class="row mt-5">
+
+                <div class="col-6" style="background-color: #f1f1f1;">
+                    <p>{{details.description}}</p>
+
+                </div>
+                <div class="col-6">
+                    <p style="text-align: left;">{{details.team1}}- {{details.team1percentage}}</p>
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" [style.width]="details.team1percentage"
+                            [style.background-color]="details.team1color" style="color:rgb(248, 245, 245)"
+                            aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{details.team1percentage}}</div>
+                    </div>
+                    <p style="text-align: left;" class="mt-3">{{details.team2}}- {{details.team2percentage}}</p>
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" [style.width]="details.team2percentage"
+                            [style.background-color]="details.team2color" style="color:rgb(248, 245, 245)"
+                            aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{details.team2percentage}}</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div id="tab2" class="tab-slider--body" *ngSwitchCase="'tab2'">
+
+        </div>
+    </div>
+
+</div>

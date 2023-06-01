@@ -1,1 +1,443 @@
 /* You can add global styles to this file, and also import other style files */
+.background {
+  background-color: #020210 !important;
+
+}
+
+/* body {
+  background-color: #020210 !important;
+
+
+} */
+
+.text-color {
+  color: white;
+}
+
+.icon-color {
+  color: white !important;
+}
+
+.item :hover .item {
+  background-color: rgb(156, 197, 232);
+}
+
+.ddm {
+  background-color: #ffffff;
+}
+
+.item {
+  background-color: white;
+  cursor: pointer;
+  color: black;
+
+}
+
+.bodyHeadingText {
+  color: black;
+}
+
+.searchbar {
+  padding-left: 10%;
+  width: 400px;
+}
+
+.swipercaros {
+  height: 180px;
+  width: 100%;
+  border: 0;
+  border-radius: 10px;
+  cursor: pointer;
+  opacity:0.9;
+}
+.swiper-slide {
+  opacity: 0.9;
+  color: rgb(255, 255, 255);
+}
+.swiper-slide:hover {
+  opacity: 1;
+  color: rgb(255, 255, 255);
+}
+.cricketCardFooter{
+  margin-top: 110px;
+}
+.carousel {
+  width: 100%;
+  height: 400px;
+}
+
+.carousel-item {
+  height: 100%;
+}
+
+
+.swiper-wrapper {
+
+  padding-bottom: 22px;
+}
+
+
+.tab-slider--nav {
+  width: 100%;
+  float: left;
+  margin-bottom: 20px;
+  justify-items: center !important;
+  
+  
+}
+
+
+.tab-slider--tabs {
+  display: block;
+  float: left;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: relative;
+  border-radius: 35px;
+  overflow: hidden;
+  background: #fff;
+  height: 35px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.tab-slider--tabs:after {
+  content: "";
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+  border-radius: 35px;
+}
+.tab-slider--tabs.slide:after {
+  left: 50%;
+}
+
+.tab-slider--trigger {
+  font-size: 12px;
+  line-height: 1;
+  font-weight: bold;
+  color: #ea9903;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 11px 20px;
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+  display: inline-block;
+  -webkit-transition: color 250ms ease-in-out;
+  transition: color 250ms ease-in-out;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.tab-slider--trigger.active {
+  color: #fff;
+  background: #ea9903;
+}
+
+.tab-slider--body {
+  margin-bottom: 20px;
+}
+
+.circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgb(144, 202, 164);
+  text-align: center;
+  color: black;
+
+}
+/* .circle::before {
+  font-size: 20px;
+  color: white;
+  position: relative;
+  top: 30% !important;
+  left: 32%;
+} */
+.flex-container > div {
+  color: black(9, 1, 1);
+  width: 50px;
+  margin: 10px;
+  text-align: center !important;
+  line-height: 25px;
+  font-size: 20px;
+}
+.flex-container {
+  display: flex;
+  background-color: #f1f1f1;
+  justify-content: center;
+  /* border-radius: 5px !important; */
+}
+.w3-card-2{
+  text-align: center;
+  border-radius: 20px !important;
+  border-left: solid 3px #ea9903 !important;
+  /* border-right: solid 3px #ea9903 !important; */
+  font-size: 25px;
+}
+.venustatscard{
+  opacity: 0.8;
+  font-size: medium !important;
+}
+
+.accordianstyle{
+  display: block;
+  text-align: left;
+}
+.accordCard{
+  border-left: 0px;
+  border-right: 0px;
+  border-radius: 0;
+  border-top: 0px;
+  
+}
+
+.accordianstyle .accordion-icon {
+  float: right;
+}
+
+.accordianstyle.collapsed .accordion-icon:before {
+  content: "+";
+}
+
+.accordianstyle:not(.collapsed) .accordion-icon:before {
+  content: "-";
+}
+
+.win {
+  background-color: rgb(199, 244, 199);
+  color: rgb(1, 92, 22);
+  border-radius: 10px;
+}
+
+.loss {
+  background-color: rgb(247, 185, 185);
+  color: rgb(132, 3, 3);
+  border-radius: 10px;
+}
+.flex-container{
+  background-color: white;
+  height: 50px;
+}
+.bg-footer{
+  color: rgb(5, 5, 5);
+}
+
+
+.team-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 20px;
+}
+
+.team-card {
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  flex-basis: calc(33.33% - 20px);
+  margin-bottom: 20px;
+  padding: 10px;
+  text-align: center;
+}
+
+.team-card img {
+  border-radius: 50%;
+  height: 100px;
+  margin-bottom: 10px;
+  width: 100px;
+}
+
+.team-card h3 {
+  font-size: 20px;
+  margin: 0;
+}
+
+.team-card p {
+  font-size: 16px;
+  margin: 0;
+}
+/* 
+.modal {
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.modal-content {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 10% auto;
+  max-width: 800px;
+  padding: 20px;
+  position: relative;
+  text-align: center;
+}
+
+.close {
+  color: #aaa;
+  cursor: pointer;
+  font-size: 28px;
+  position: absolute;
+  right: 10px;
+  top: 0;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.player-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.player-card {
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  flex-basis: calc(33.33% - 20px);
+  margin-bottom: 20px;
+  padding: 10px;
+  text-align: center;
+}
+
+.player-card img {
+  border-radius: 50%;
+  height: 100px;
+  margin-bottom: 10px;
+  width: 100px;
+}
+
+.player-card h3 {
+  font-size: 20px;
+  margin: 0;
+}
+
+.player-card p {
+  font-size: 16px;
+  margin: 0;
+}
+
+.player-card span {
+  display: block;
+  font-size: 14px;
+  font-style: italic;
+  margin-top: 10px;
+}
+ */
+
+
+ .modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1; */
+}
+
+.modal-content {
+  background-color: #fefefe;
+  border: 1px solid #888;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 1286px;
+  overflow-y: auto;
+  max-height: calc(100vh - 100px);
+  margin-top: 66px;margin-top: 115px;
+  margin-left: 126px;
+}
+
+.close {
+  color: #aaa;
+  float: right !important;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.player-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+  /* padding: 10px; */
+  border-radius: 5px;
+  width: 200px;
+  /* height: 250px; */
+}
+
+.player-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 20px;
+  justify-items: center;
+}
+
+/*footer*/
+.fa-facebook {
+  color: #f4511e;
+}
+.fa {
+  padding: 10px;
+  font-size: 25px;
+  width: 60px;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* .player-card {
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  flex-basis: calc(33.33% - 20px);
+  margin-bottom: 20px;
+  padding: 10px;
+  text-align: center;
+} */
+
+/* .player-card img {
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+} */

@@ -1,0 +1,24 @@
+<div class="w3-panel w3-card-4 mt-1">
+  <div class="w3-panel w3-card-4">
+    <h2 class="bodyHeadingText">Cricket</h2>
+    <swiper [config]="cardconfig">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide" *ngFor="let card of cards">
+          <div class="card swipercaros" [style.background-image]="'url(' + card.imageUrl + ')'"
+            style="background-size: 100% 180px;background-repeat: no-repeat;">
+            <app-card style="text-align: center;" (click)="getMatchDetails(card.id)">
+              <div class="mt-2">
+                <h5>{{card.title}}</h5>
+              </div>
+              <div class="cricketCardFooter">
+                <h5>{{card.title}}</h5>
+              </div>
+            </app-card>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </swiper>
+  </div>
+</div>
